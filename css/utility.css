@@ -1,0 +1,113 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap");
+
+/* end google fonts */
+/* main setting */
+* {
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+:root {
+    --primary-color: #061119;
+    --secondery-color: #00ffa3;
+    --transition: 0.3s;
+    --line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.container {
+    width: 95%;
+}
+
+/* main setting */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Bakbak One", cursive;
+}
+
+/* Change nav background color */
+.changeBg {
+    background: rgba(27, 34, 38, 0.8);
+    backdrop-filter: blur(15px);
+}
+
+/* end background change */
+/* dots */
+.btn_doted {
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+    cursor: pointer;
+}
+
+.dots_left {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.dots_right {
+    position: absolute;
+    top: 5px;
+    right: -20px;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+    transform: rotate(92deg);
+    -webkit-transform: rotate(92deg);
+    -moz-transform: rotate(92deg);
+    -ms-transform: rotate(92deg);
+    -o-transform: rotate(92deg);
+}
+
+.btn_doted::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+
+    z-index: -1;
+    transition: width var(--transition);
+    -webkit-transition: width var(--transition);
+    -moz-transition: width var(--transition);
+    -ms-transition: width var(--transition);
+    -o-transition: width var(--transition);
+}
+
+.btn_doted:hover .dots_right {
+    right: 5px;
+}
+
+/* end dots */
+img {
+    object-fit: cover;
+}
